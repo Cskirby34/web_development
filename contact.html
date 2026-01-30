@@ -1,8 +1,31 @@
 <html lang="en">
 <head>
-  <title>Contacts</title>
+  <meta charset="UTF-8">
+  <title>Contacts Us</title>
   
 </head>
+  
+  <body>
+    <h1>Contact us if you have Question</h1>
+     <p>
+      <label for="names">Name?</label>
+      <input type="text" id="names" name="names" placeholder="Your name" required>
+    </p>
+    <p>
+      <label for="emailAddr">Email address?</label>
+      <input type="email" id="emailAddr" name="emailAddr" placeholder="name@domain.com" pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
+    </p>
+    <p>
+      <label for="phoneNum">Phone Number?</label>
+      <input type="tel" id="phoneNum" name="phoneNum" placeholder="6478684556" required>
+    </p>
+    <p>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+    </p> 
+    
+</body>
+
   
   
 </html>
