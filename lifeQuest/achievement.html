@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title> Achievement </title>
-</head>
+   <title>Achievement</title>
 
+   <style>
+      body {
+         margin: 0;
+         overflow-x: hidden;
+      }
+
+      .confetti {
+         position: fixed;
+         top: -10px;
+         width: 10px;
+         height: 14px;
+         opacity: 0.9;
+         pointer-events: none;
+         animation-name: fall, spin;
+         animation-timing-function: linear;
+      }
+
+      @keyframes fall {
+         to {
+            transform: translateY(110vh);
+         }
+      }
+
+      @keyframes spin {
+         from {
+            transform: rotate(0deg);
+         }
+         to {
+            transform: rotate(360deg);
+         }
+      }
+   </style>
+</head>
 
 <body>
 
@@ -20,9 +52,9 @@
     <section>
         <h2>Unlocked Badges</h2>
         <ul>
-            <li> Budget Master</li>
-            <li> 7-Day Habit Streak</li>
-            <li> Productivity Rookie</li>
+            <li>Budget Master</li>
+            <li>7-Day Habit Streak</li>
+            <li>Productivity Rookie</li>
         </ul>
     </section>
 </main>
@@ -30,6 +62,39 @@
 <footer>
     <p>© 2026 LifeQuest</p> 
 </footer>
+
+<script>
+   const colors = [
+      "#ff3b3b", "#ffb703", "#4cc9f0",
+      "#80ed99", "#c77dff", "#f72585"
+   ];
+
+   function createConfetti() {
+      const confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+
+      const size = Math.random() * 8 + 6;
+      confetti.style.width = size + "px";
+      confetti.style.height = size * 1.4 + "px";
+
+      confetti.style.left = Math.random() * window.innerWidth + "px";
+      confetti.style.backgroundColor =
+         colors[Math.floor(Math.random() * colors.length)];
+
+      const fallDuration = Math.random() * 3 + 2;
+      confetti.style.animationDuration =
+         `${fallDuration}s, ${Math.random() * 2 + 1}s`;
+
+      document.body.appendChild(confetti);
+
+      setTimeout(() => {
+         confetti.remove();
+      }, fallDuration * 1000);
+   }
+
+   // Start confetti rain
+   setInterval(createConfetti, 100);
+</script>
 
 </body>
 </html>
