@@ -4,44 +4,39 @@
    <meta charset="UTF-8">
    <title>Login</title>
    <link href="background.css" type="text/css" rel="stylesheet">
-   
+   <link href="login.css" type="text/css" rel="stylesheet">
 </head>
-   
+
 <body>
    <header>
       <h1>Life Quest</h1>
    </header>
+
    <main>
-      <div>
-           <label for="username">Username</label>
-           <input type="text" name="Username">
-       </div>
-       <div>     
-           <label for="passwords">Password</label>
-           <input type="password" name="secret" size="10" maxlength="10">
-
-       </div>
-       <div>  
-          <nav>
-               <p>Don't have a account create one</p>
-               <a href="create.html">Sign up</a>
-         </nav>
-
-       </div>
-    <button>Submit</button>
-
+      <div class="login-box">
+         <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+         </div>
+         <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="secret" maxlength="10">
+         </div>
+         <button type="submit">Submit</button>
+         <div class="signup-text">
+            <p>Don't have an account?</p>
+            <a href="create.html">Sign up</a>
+         </div>
+      </div>
    </main>
-   <nav>
-       <a href="index.html">Back to Dashboard</a>
-   </nav>
+
+   <div class="back-link">
+      <a href="index.html">Back to Dashboard</a>
+   </div>
+
    <footer>
-    <p>© 2026 LifeQuest</p>
+      <p>© 2026 LifeQuest</p>
    </footer>
 
 </body>
-
 </html>
-
-
-
-
