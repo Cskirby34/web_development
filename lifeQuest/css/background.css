@@ -1,18 +1,26 @@
+nav {
+  position: relative;
+}
+
+.login-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  padding-right: 100px; 
+  z-index: 1000;
+  font-size: 20px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: LightSkyBlue;
+  margin-top: 60px;
+  background-color: LightSkyBlue;
 }
-
-main {
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-header {
-    background-color: #4682B4;
-}
-footer {
-    background-color: #4682B4;
-}
-
