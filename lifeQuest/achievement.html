@@ -8,8 +8,25 @@
 
    <style>
       body {
-         margin: 0;
+         margin-top: 80px;
          overflow-x: hidden;
+      }
+
+      nav {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         padding: 10px;
+         z-index: 1000;
+         font-size: 20px;
+         background-color: white;
+      }
+
+      .login-btn {
+         position: absolute;
+         top: 10px;
+         right: 10px;
       }
 
       .confetti {
@@ -42,12 +59,8 @@
 
 <body>
 
-<header>
-    <h1>Achievements</h1>
-</header>
-
 <nav>
-	  <b>
+   <b>
       <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="moneymanager.html">Money Manager</a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="habitTracker.html">Healthy Habits</a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -55,22 +68,27 @@
       <a href="achievement.html">Achievements</a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
-	</b>
+   </b>
+   <a href="login.html" class="login-btn">Login</a>
 </nav>
 
+<header>
+   <h1>Achievements</h1>
+</header>
+
 <main>
-    <section>
-        <h2>Unlocked Badges</h2>
-        <ul>
-            <li>Budget Master</li>
-            <li>7-Day Habit Streak</li>
-            <li>Productivity Rookie</li>
-        </ul>
-    </section>
+   <section>
+      <h2>Unlocked Badges</h2>
+      <ul>
+         <li>Budget Master</li>
+         <li>7-Day Habit Streak</li>
+         <li>Productivity Rookie</li>
+      </ul>
+   </section>
 </main>
 
 <footer>
-    <p>© 2026 LifeQuest</p> 
+   <p>© 2026 LifeQuest</p>
 </footer>
 
 <script>
@@ -101,7 +119,6 @@
          confetti.remove();
       }, fallDuration * 1000);
    }
-
 
    setInterval(createConfetti, 100);
 </script>
