@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <title>Create</title>
-   
+  <meta charset="UTF-8">
+  <title>Contacts Us</title>
+  <link href="background.css" type="text/css" rel="stylesheet">
+  <link href="contact.css" type="text/css" rel="stylesheet">
 </head>
-<body>
-   <header>
-      <h1>Life Quest</h1>
-      <p>create your account here</p>
-      <link href="background.css" type="text/css" rel="stylesheet">
-   </header>
-   <main>
-      <div>
-           <p1>Create a username</p1>
-    </div>
-    <div>
-           <label for="username">Username</label>
-           <input type="text" name="Username">
-    </div>     
- 
-    <div>
-       <p1>Password must be at least 10 letters long</p1>     
-    </div>
-    <div>
-           <label for="passwords">Password</label>
-           <input type="password" name="secret" size="10" min="10">
+  
+  <body>
+    <header>
+      <h1>Contact us if you have Question</h1>
+    </header>
+    <nav>
+      <b>
+         <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="moneymanager.html">Money Manager</a>&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="habitTracker.html">Healthy Habits</a>&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="productivity.html">Productivity</a>&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="achievement.html">Achievements</a>&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      </b>
+         <a href="login.html" class="login-btn">Login</a>
+   </nav>
+    <main>
+      <section>
+        <h2>Get in touch</h2>
+        <form action="#" method="post">
+          <div>
+          <label for="names">Full Name:</label>
+          <input type="text" id="names" name="names" placeholder="Your name" required>
+          <p> </p>
+          </div>
+          <div>
+          <label for="emailAddr">Email address?</label>
+          <input type="email" id="emailAddr" name="emailAddr" placeholder="name@domain.com" pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
+          <p> </p>
+          </div>
+          <label for="phoneNum">Phone Number?</label>
+          <input type="tel" id="phoneNum" name="phoneNum" placeholder="6478684556" required>
+          <p> </p>
 
-    </div>
-    <button>Submit</button>
-   </main>
-    <footer>
+          <div>
+          <label for="message">Message</label>
+          <p> </p>
+          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <input type="submit" value="Send Message">
+        </form>
+           
+      </section>
+    </main>
+     
+    
+
+  <footer>
     <p>© 2026 LifeQuest</p>
-   </footer>
+  </footer>
 </body>
+  
+  
 </html>
-
-
