@@ -1,0 +1,15 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+label {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
