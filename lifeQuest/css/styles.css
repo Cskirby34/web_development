@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -32,6 +35,7 @@ nav a:hover {
 
 main {
     padding: 20px;
+    flex: 1;
 }
 
 .card {
@@ -66,8 +70,6 @@ footer {
     justify-content: center;
 }
 
-
-/* this is for tablets */
 @media (max-width: 768px) {
 
     nav {
@@ -85,7 +87,6 @@ footer {
     }
 }
 
-/* this is for phones */
 @media (max-width: 480px) {
 
     body {
