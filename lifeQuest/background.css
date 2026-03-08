@@ -1,3 +1,26 @@
-body { background-color: LightSkyBlue; }
+nav {
+  position: relative;
+}
 
+.login-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  padding-right: 100px; 
+  z-index: 1000;
+  font-size: 20px;
+  background-color: white;
+  box-sizing: border-box;
+}
 
+body {
+  margin-top: 60px;
+  background-color: LightSkyBlue;
+}
