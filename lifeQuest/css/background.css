@@ -1,2 +1,18 @@
-body { background-color: LightSkyBlue; }
+body {
+    background-color: LightSkyBlue;
+}
+
+main {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+header {
+    background-color: #4682B4;
+}
+footer {
+    background-color: #4682B4;
+}
 
