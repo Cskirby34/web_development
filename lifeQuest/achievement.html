@@ -3,32 +3,24 @@
 <head>
    <meta charset="UTF-8">
    <title>Achievement</title>
-   <link href="../css/background.css" type="text/css" rel="stylesheet">
-   <link href="../css/achivement.css" type="text/css" rel="stylesheet">
+   <link href="../css/styles.css" type="text/css" rel="stylesheet">
 
    <style>
       body {
-         margin-top: 80px;
          overflow-x: hidden;
       }
-
       nav {
-         position: fixed;
-         top: 0;
-         left: 0;
+         position: relative;
          width: 100%;
          padding: 10px;
          z-index: 1000;
          font-size: 20px;
-         background-color: white;
       }
-
       .login-btn {
          position: absolute;
          top: 10px;
          right: 10px;
       }
-
       .confetti {
          position: fixed;
          top: -10px;
@@ -39,13 +31,11 @@
          animation-name: fall, spin;
          animation-timing-function: linear;
       }
-
       @keyframes fall {
          to {
             transform: translateY(110vh);
          }
       }
-
       @keyframes spin {
          from {
             transform: rotate(0deg);
@@ -56,9 +46,10 @@
       }
    </style>
 </head>
-
 <body>
-
+<header>
+   <h1>Achievements</h1>
+</header>
 <nav>
       <b>
          <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -68,14 +59,10 @@
          <a href="achievement.html">Achievements</a>&nbsp;&nbsp;&nbsp;&nbsp;
          <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
          <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="quizGames.html">Quiz Game</a>&nbsp;&nbsp;&nbsp;&nbsp;
       </b>
-         <a href="login.html" class="login-btn">Login</a>
+      <a href="login.html" class="login-btn">Login</a>
 </nav>
-
-<header>
-   <h1>Achievements</h1>
-</header>
-
 <main>
    <section>
       <h2>Unlocked Badges</h2>
@@ -86,42 +73,32 @@
       </ul>
    </section>
 </main>
-
 <footer>
    <p>© 2026 LifeQuest</p>
 </footer>
-
 <script>
    const colors = [
       "#ff3b3b", "#ffb703", "#4cc9f0",
       "#80ed99", "#c77dff", "#f72585"
    ];
-
    function createConfetti() {
       const confetti = document.createElement("div");
       confetti.classList.add("confetti");
-
       const size = Math.random() * 8 + 6;
       confetti.style.width = size + "px";
       confetti.style.height = size * 1.4 + "px";
-
       confetti.style.left = Math.random() * window.innerWidth + "px";
       confetti.style.backgroundColor =
          colors[Math.floor(Math.random() * colors.length)];
-
       const fallDuration = Math.random() * 3 + 2;
       confetti.style.animationDuration =
          `${fallDuration}s, ${Math.random() * 2 + 1}s`;
-
       document.body.appendChild(confetti);
-
       setTimeout(() => {
          confetti.remove();
       }, fallDuration * 1000);
    }
-
    setInterval(createConfetti, 100);
 </script>
-
 </body>
 </html>
