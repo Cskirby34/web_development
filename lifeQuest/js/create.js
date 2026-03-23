@@ -2,24 +2,35 @@ function checkForm() {
    const username = document.getElementById("username");
    const email = document.getElementById("email");
    const password = document.getElementById("password");
+   const confirmPassword = document.getElementById("confirmPassword");
 
    const errors = [];
 
    username.classList.remove("error");
+   email.classList.remove("error");
    password.classList.remove("error");
+   confirmPassword.classList.remove("error");
 
    if (username.value.length < 1) {
       errors.push("Missing username.");
       username.classList.add("error");
    }
 
-   if (password.value.length < 1) {
-      errors.push("Missing password.");
+   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
+   if (!emailRegex.test(email.value)) {
+      errors.push("Invalid or missing email address.");
+      email.classList.add("error");  // fixed: was adding error to password
+   }
+
+   if (password.value.length < 10) {
+      errors.push("Password must be at least 10 characters long.");
       password.classList.add("error");
    }
-   if (email.value.length < 1) {
-      errors.push("Missing email.");
+
+   if (password.value !== confirmPassword.value) {
+      errors.push("Passwords don't match.");
       password.classList.add("error");
+      confirmPassword.classList.add("error");
    }
 
    if (errors.length > 0) {
@@ -29,7 +40,7 @@ function checkForm() {
          errorDiv = document.createElement("div");
          errorDiv.id = "formErrors";
          errorDiv.style.color = "red";
-         document.querySelector(".login-box").appendChild(errorDiv);
+         document.querySelector(".create-box").appendChild(errorDiv);  // fixed: was .login-box
       }
 
       const listItems = errors.map(e => `<li>${e}</li>`).join("");
