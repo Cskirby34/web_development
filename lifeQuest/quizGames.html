@@ -7,13 +7,14 @@
    <link href="css/background.css" type="text/css" rel="stylesheet">
    <link href="css/styles.css" type="text/css" rel="stylesheet">
    <script src="quizscript.js" defer></script>
-   
 </head>
+
 <body>
    <header>
       <h1>Welcome to LifeQuest</h1>
       <p>Fun Fun mini quiz</p>
    </header>
+
    <nav>
       <b>
          <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -25,13 +26,16 @@
          <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
          <a href="quizGames.html">Quiz Game</a>&nbsp;&nbsp;&nbsp;&nbsp;
       </b>
-         <a href="login.html" class="login-btn">Login</a>
+      <a href="login.html" class="login-btn">Login</a>
    </nav>
+
    <main>
       <section>
          <h2>Quiz time</h2>
       </section>
-      
+
+      <form id="quizForm">
+
          <p>Q1. what is the average hour of sleep a person must need?</p>
          <div>                                
             <input type="radio" name="hour" id="c1" value="7">
@@ -45,6 +49,7 @@
             <input type="radio" name="hour" id="c3" value="0">
             <label for="c3">0 hours</label>
          </div>
+
          <p>Q2. Which of the following is something that chould be consumed.</p>
          <div>
             <input type="radio" name="food" id="2c1" value="chicken">
@@ -58,6 +63,7 @@
             <input type="radio" name="food" id="2c3" value="oil">
             <label for="2c3">oil</label>
          </div>
+
          <p>Q3. True or False? you can only frink a certain amount of water. </p>
          <div>
             <input type="radio" name="true" id="3c1" value="true">
@@ -85,12 +91,10 @@
          <p>
             <input type="submit" value="Submit">
          </p>
-      
-   </main>
+      </form>
+   </main>git
    <footer>
-    <p>&#169; 2026 LifeQuest</p>
-</footer>
+      <p>&#169; 2026 LifeQuest</p>
+   </footer>
 </body>
-  
-
 </html>
