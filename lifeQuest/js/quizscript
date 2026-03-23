@@ -12,7 +12,7 @@ document.getElementById("quizForm").addEventListener("submit", function(event) {
     let q3 = document.querySelector('input[name="true"]:checked');
     if (q3 && q3.value === "true") score++;
 
-    let q4 = document.querySelectorAll('input[name="hour"]:checked');
+    let q4 = document.querySelectorAll('input[name="saving"]:checked');
     let correctCount = 0;
 
     q4.forEach(choice => {
