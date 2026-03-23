@@ -9,14 +9,14 @@ document.getElementById("quizForm").addEventListener("submit", function(event) {
     let q2 = document.querySelector('input[name="food"]:checked');
     if (q2 && q2.value === "chicken") score++;
 
-    let q3 = document.querySelector('input[name="true"]:checked');
+    let q3 = document.querySelector('input[name="q3"]:checked');
     if (q3 && q3.value === "true") score++;
 
     let q4 = document.querySelectorAll('input[name="saving"]:checked');
     let correctCount = 0;
 
     q4.forEach(choice => {
-        if (choice.id === "4c2" || choice.id === "4c3") {
+        if (choice.value === "correct") {
             correctCount++;
         }
     });

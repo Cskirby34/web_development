@@ -6,7 +6,7 @@
    <title>Quiz Games</title>
    <link href="css/background.css" type="text/css" rel="stylesheet">
    <link href="css/styles.css" type="text/css" rel="stylesheet">
-   <script src="quizscript.js" defer></script>
+   <script src="js/quizscript.js" defer></script>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
             <label for="c3">0 hours</label>
          </div>
 
-         <p>Q2. Which of the following is something that chould be consumed.</p>
+         <p>Q2. Which of the following is something that should be consumed.</p>
          <div>
             <input type="radio" name="food" id="2c1" value="chicken">
             <label for="2c1">chicken</label>
@@ -64,36 +64,42 @@
             <label for="2c3">oil</label>
          </div>
 
-         <p>Q3. True or False? you can only drink a certain amount of water. </p>
+         <p>Q3. True or False? You can only drink a certain amount of water.</p>
          <div>
-            <input type="radio" name="true" id="3c1" value="true">
+            <input type="radio" name="q3" id="3c1" value="true">
             <label for="3c1">True</label>
          </div>
          <div>
-            <input type="radio" name="true" id="3c2" value="false">
+            <input type="radio" name="q3" id="3c2" value="false">
             <label for="3c2">False</label>
          </div>
          
-         <p>Q4. Choose the following option that work with the sentence. The best way to save money is.</p>
-         <p>note: there are mutiple choice</p>
+         <p>Q4. Choose the correct options for saving money.</p>
+         <p>Note: multiple correct answers</p>
+
          <div>
             <label for="4c1">give it to someone else</label>
-            <input type="checkbox" name="saving" id="4c1">
+            <input type="checkbox" name="saving" id="4c1" value="wrong">
          </div>
+
          <div>
             <label for="4c2">focus more on needs</label>
-            <input type="checkbox" name="saving" id="4c2">
+            <input type="checkbox" name="saving" id="4c2" value="correct">
          </div>
+
          <div>
-            <label for="4c3">impose a budget.</label>
-            <input type="checkbox" name="saving" id="4c3">
+            <label for="4c3">impose a budget</label>
+            <input type="checkbox" name="saving" id="4c3" value="correct">
          </div>
+
          <p>
             <input type="submit" value="Submit">
          </p>
       </form>
+
       <h3 id="result"></h3>
    </main>
+
    <footer>
       <p>&#169; 2026 LifeQuest</p>
    </footer>
