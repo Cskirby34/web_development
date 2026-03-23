@@ -1,5 +1,6 @@
 function checkForm() {
    const username = document.getElementById("username");
+   const email = document.getElementById("email");
    const password = document.getElementById("password");
 
    const errors = [];
@@ -14,6 +15,10 @@ function checkForm() {
 
    if (password.value.length < 1) {
       errors.push("Missing password.");
+      password.classList.add("error");
+   }
+   if (email.value.length < 1) {
+      errors.push("Missing email.");
       password.classList.add("error");
    }
 
