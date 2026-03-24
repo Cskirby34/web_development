@@ -40,7 +40,7 @@ function checkForm() {
          errorDiv = document.createElement("div");
          errorDiv.id = "formErrors";
          errorDiv.style.color = "red";
-         document.querySelector(".create-box").appendChild(errorDiv);  // fixed: was .login-box
+         document.querySelector(".create-box").appendChild(errorDiv);  
       }
 
       const listItems = errors.map(e => `<li>${e}</li>`).join("");
@@ -55,3 +55,13 @@ document.querySelector("button[type='submit']").addEventListener("click", functi
    event.preventDefault();
    checkForm();
 });
+
+function button1(){
+   const password = document.getElementById("password");
+   password.type = password.type === "password" ? "text" : "password";
+}
+
+function button2(){
+   const password = document.getElementById("password");
+   confirmpassword.type = confirmpassword.type === "password" ? "text" : "password";
+}
