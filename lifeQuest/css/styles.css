@@ -142,3 +142,22 @@ canvas {
         padding: 10px;
     }
 }
+
+input[type="submit"] {
+    background-color: darkblue;  
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1abc9c; 
+}
+
+input[type="submit"]:active {
+    background-color: rgb(36, 174, 96); 
+    transform: translateY(4px);
+}
+
