@@ -71,6 +71,7 @@ nav b {
     font-size: 16px;
     white-space: nowrap;
     flex-shrink: 0;
+    margin-left: auto;
 }
 
 .login-btn:hover {
