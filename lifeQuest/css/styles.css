@@ -16,13 +16,25 @@ header {
     position: sticky;
     top: 0;
     z-index: 1001;
-    height: 120px;        
-    width: 100%;          
-    box-sizing: border-box; 
+    height: 120px;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
+    overflow: hidden;      
+    flex-shrink: 0;        
+}
+header h1 {
+    white-space: nowrap;                 
+    font-size: clamp(16px, 2.5vw, 28px); 
+    margin: 0;
+}
+header p, header h2, header h3 {
+    white-space: nowrap;
+    font-size: clamp(12px, 1.5vw, 18px);
+    margin: 5px 0 0 0;
 }
 nav {
     display: flex;
@@ -30,14 +42,15 @@ nav {
     align-items: center;
     background-color: #34495e;
     padding: 5px 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;     
     position: sticky;
-    top: 120px;        
+    top: 120px;            
     z-index: 1000;
-    height: 50px;        
-    width: 100%;          
-    box-sizing: border-box; 
-    overflow: visible;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;      
+    flex-shrink: 0;        
     margin-bottom: 0;
 }
 nav a {
@@ -57,7 +70,7 @@ nav a:hover {
 }
 nav b {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;     
     justify-content: center;
 }
 .login-btn {
@@ -75,7 +88,6 @@ nav b {
 .login-btn:hover {
     background-color: #16a085;
 }
-
 .hamburger {
     display: none;
     background: none;
@@ -86,8 +98,8 @@ nav b {
     padding: 10px 15px;
     position: relative;
     z-index: 1001;
+    flex-shrink: 0;
 }
-
 main {
     padding: 20px;
     text-align: center;
@@ -131,13 +143,24 @@ canvas {
 }
 
 @media (max-width: 768px) {
+    header {
+        height: 120px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    header h1 {
+        font-size: clamp(14px, 4vw, 22px);
+        white-space: nowrap;
+    }
     nav {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        min-height: 50px;
+        height: 50px;
+        flex-wrap: nowrap;
+        overflow: hidden;
         padding: 0 10px;
-        top: 120px; /* ← keep below header on mobile too */
+        top: 120px;
     }
     .hamburger {
         display: block;
@@ -179,14 +202,14 @@ canvas {
         flex-direction: column;
         align-items: center;
     }
-    header {
-        font-size: 18px;
-    }
 }
 
 @media (max-width: 480px) {
     body {
         font-size: 14px;
+    }
+    header h1 {
+        font-size: clamp(12px, 5vw, 20px);
     }
     nav a {
         padding: 12px 20px;
@@ -199,7 +222,7 @@ canvas {
 }
 
 input[type="submit"] {
-    background-color: darkblue;  
+    background-color: darkblue;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -207,9 +230,9 @@ input[type="submit"] {
     cursor: pointer;
 }
 input[type="submit"]:hover {
-    background-color: #1abc9c; 
+    background-color: #1abc9c;
 }
 input[type="submit"]:active {
-    background-color: rgb(36, 174, 96); 
+    background-color: rgb(36, 174, 96);
     transform: translateY(4px);
 }
