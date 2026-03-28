@@ -1,4 +1,7 @@
-p, label{
+p, label {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+h1, h2 {
+    font-family: Arial, sans-serif;
+}
