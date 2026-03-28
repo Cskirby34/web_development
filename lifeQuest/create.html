@@ -20,31 +20,33 @@
    <main>
       <div class="create-box">
          <h2>Create your account</h2>
+         <form action="#" method="post">
 
-         <div>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Choose a username" required>
-         </div>
+            <div>
+               <label for="username">Username</label>
+               <input type="text" id="username" name="username" placeholder="Choose a username" required>
+            </div>
 
-         <div>
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="ex: user1@email.com" required>
-         </div>
+            <div>
+               <label for="email">Email</label>
+               <input type="email" id="email" name="email" placeholder="ex: user1@email.com" required>
+            </div>
 
-         <div>
-            <label for="password">Password</label>
-            <p class="hint">Password must be at least 10 characters long</p>
-            <input type="password" id="password" name="secret" minlength="10" placeholder="Choose a password" required>
-            <input type="checkbox" onclick="button1()">Show Password
-         </div>
+            <div>
+               <label for="password">Password</label>
+               <p class="hint">Password must be at least 10 characters long</p>
+               <input type="password" id="password" name="secret" minlength="10" placeholder="Choose a password" required>
+               <input type="checkbox" onclick="button1()">Show Password
+            </div>
 
-         <div>
-            <label for="confirmPassword">Confirm Password</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" minlength="10" placeholder="Repeat your password" required>
-            <input type="checkbox" onclick="button2()"> Show Password 
-         </div>
+            <div>
+               <label for="confirmPassword">Confirm Password</label>
+               <input type="password" id="confirmPassword" name="confirmPassword" minlength="10" placeholder="Repeat your password" required>
+               <input type="checkbox" onclick="button2()"> Show Password 
+            </div>
 
-         <button type="submit">Create Account</button>
+            <button type="submit">Create Account</button>
+         </form>
 
          <div class="login-text">
             <p>Already have an account? <a href="login.html">Log in</a></p>
