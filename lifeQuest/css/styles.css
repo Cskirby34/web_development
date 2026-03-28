@@ -8,12 +8,14 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 header {
     background-color: #2c3e50;
     color: white;
     text-align: center;
     padding: 40px 20px; 
 }
+
 nav {
     display: flex;
     justify-content: center;
@@ -30,6 +32,7 @@ nav {
     margin-bottom: 80px;
 
 }
+
 nav a {
     color: white;
     padding: 14px 20px;
@@ -42,14 +45,17 @@ nav a {
     line-height: 1;
     box-sizing: border-box;
 }
+
 nav a:hover {
     background-color: #1abc9c;
 }
+
 nav b {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .login-btn {
     position: absolute;
     right: 10px;
@@ -62,9 +68,11 @@ nav b {
     white-space: nowrap;
     flex-shrink: 0;
 }
+
 .login-btn:hover {
     background-color: #16a085;
 }
+
 main {
     padding: 20px;
     text-align: center;
@@ -79,14 +87,17 @@ main {
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.3s;
 }
+
 .card:hover {
     transform: scale(1.03);
 }
+
 img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
+
 footer {
     background-color: #333;
     color: white;
@@ -98,6 +109,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 canvas {
     position: fixed;
     top: 0;
@@ -105,6 +117,7 @@ canvas {
     pointer-events: none;
     z-index: 999;
 }
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -129,6 +142,7 @@ canvas {
         font-size: 18px;
     }
 }
+
 @media (max-width: 480px) {
     body {
         font-size: 14px;
