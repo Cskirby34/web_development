@@ -13,9 +13,16 @@ header {
     color: white;
     text-align: center;
     padding: 40px 20px;
-    position: sticky;  
-    top: 0;            
-    z-index: 999;      
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    height: 120px;        
+    width: 100%;          
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 }
 nav {
     display: flex;
@@ -25,10 +32,11 @@ nav {
     padding: 5px 0;
     flex-wrap: wrap;
     position: sticky;
-    top: 0;
+    top: 120px;        
     z-index: 1000;
-    min-height: 50px;
-    box-sizing: border-box;
+    height: 50px;        
+    width: 100%;          
+    box-sizing: border-box; 
     overflow: visible;
     margin-bottom: 0;
 }
@@ -68,7 +76,6 @@ nav b {
     background-color: #16a085;
 }
 
-/* ── Hamburger (hidden on desktop) ── */
 .hamburger {
     display: none;
     background: none;
@@ -77,8 +84,8 @@ nav b {
     font-size: 28px;
     cursor: pointer;
     padding: 10px 15px;
-    position: relative; /* ← makes z-index work */
-    z-index: 1001;      /* ← sits above nav drawer */
+    position: relative;
+    z-index: 1001;
 }
 
 main {
@@ -123,7 +130,6 @@ canvas {
     z-index: 999;
 }
 
-/* ── Tablet & Mobile ── */
 @media (max-width: 768px) {
     nav {
         flex-direction: row;
@@ -131,16 +137,17 @@ canvas {
         align-items: center;
         min-height: 50px;
         padding: 0 10px;
+        top: 120px; /* ← keep below header on mobile too */
     }
     .hamburger {
-        display: block; /* ← show ☰ button */
+        display: block;
     }
     #nav-links {
         display: flex;
         flex-direction: column;
         position: fixed;
         top: 0;
-        left: -260px;       /* hidden off screen */
+        left: -260px;
         width: 260px;
         height: 100vh;
         background-color: #2c3e50;
@@ -151,7 +158,7 @@ canvas {
         overflow-y: auto;
     }
     #nav-links.open {
-        left: 0;            /* slides in */
+        left: 0;
     }
     nav a {
         font-size: 15px;
@@ -177,7 +184,6 @@ canvas {
     }
 }
 
-/* ── Phone ── */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
