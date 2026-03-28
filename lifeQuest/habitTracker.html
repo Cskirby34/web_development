@@ -13,15 +13,16 @@
     </header>
 
     <nav>
-      <b>
-        <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="moneymanager.html">Money Manager</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="habitTracker.html">Healthy Habits</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="productivity.html">Productivity</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="achievement.html">Achievements</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="quizGames.html">Quiz Game</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <b id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="moneymanager.html">Money Manager</a>
+        <a href="habitTracker.html">Healthy Habits</a>
+        <a href="productivity.html">Productivity</a>
+        <a href="achievement.html">Achievements</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="quizGames.html">Quiz Game</a>
       </b>
       <a href="login.html" class="login-btn">Login</a>
     </nav>
@@ -41,5 +42,18 @@
     <footer>
       <p>&#169; 2026 LifeQuest</p>
     </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById('nav-links').classList.toggle('open');
+      }
+
+      document.addEventListener('click', function(e) {
+        const nav = document.querySelector('nav');
+        if (!nav.contains(e.target)) {
+          document.getElementById('nav-links').classList.remove('open');
+        }
+      });
+    </script>
   </body>
 </html>
