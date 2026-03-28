@@ -5,9 +5,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Login</title>
    <link href="css/background.css" type="text/css" rel="stylesheet">
-   <link href="css/login.css" type="text/css" rel="stylesheet">
    <link href="css/styles.css" type="text/css" rel="stylesheet">
+   <link href="css/login.css" type="text/css" rel="stylesheet">
    <script src="js/login.js" defer></script>
+   <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -17,25 +18,28 @@
 
    <main>
       <div class="login-box">
-         <div>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username">
-         </div>
-         <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="secret">
-         </div>
-         <button type="submit">Submit</button>
+         <form action="#" method="post">
+            <div>
+               <label for="username">Username</label>
+               <input type="text" id="username" name="username">
+            </div>
+            <div>
+               <label for="password">Password</label>
+               <input type="password" id="password" name="secret">
+            </div>
+            <button type="submit">Submit</button>
+         </form>
          <div class="signup-text">
             <p>Don't have an account?</p>
             <a href="create.html">Sign up</a>
          </div>
+         <div class="back-link">
+            <a href="index.html">Back to Dashboard</a>
+         </div>
       </div>
    </main>
 
-   <div class="back-link">
-      <a href="index.html">Back to Dashboard</a>
-   </div>
+   
 
    <footer>
       <p>&#169; 2026 LifeQuest</p>
