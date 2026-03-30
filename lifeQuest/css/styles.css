@@ -36,6 +36,7 @@ header p, header h2, header h3 {
     font-size: clamp(12px, 1.5vw, 18px);
     margin: 5px 0 0 0;
 }
+
 nav {
     display: flex;
     justify-content: center;
@@ -68,7 +69,9 @@ nav a {
 nav a:hover {
     background-color: #1abc9c;
 }
-nav b {
+
+nav ul {
+    list-style-type: none;
     display: flex;
     flex-wrap: nowrap;     
     justify-content: center;
