@@ -30,16 +30,21 @@
       <section>
         <h2>Today's log</h2>
         <ul>
-          <li>Meals: 3</li>
-          <li>Water: 6 glasses</li>
-          <li>Sleep: 7 hours</li>
-git          <li>Below is a timer you can use for how long you exercise for</li>
-          <div>
-            <li>Exercise: <span id="timer">0</span> seconds</li>
-
-          </div>
-
-          
+          <li>Meals:<span id="counter3">0</span>
+            <button onclick="add3()">+</button>
+            <button onclick="sub3()">-</button>
+          </li>
+          <li>
+            Water: <span id="counter">0</span> glasses
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+          </li>
+          <li>Sleep: <span id="counter2"> 0</span>hours
+          <button onclick="add2()">+</button>
+          <button onclick="sub2()">-</button>
+          </li>
+          <li>Below is a timer you can use for how long you exercise for</li>
+          <li>Exercise: <span id="timer">0</span> seconds</li>
         </ul>
         <button onclick="myStartFunction()">Start!</button>
         <button onclick="myStopFunction()">Stop!</button>
@@ -50,11 +55,45 @@ git          <li>Below is a timer you can use for how long you exercise for</li>
       <p>&#169; 2026 LifeQuest</p>
     </footer>
     <script>
+      let count = 0;
+      let count2 = 0;
+      let count3 = 0;
+
+        
+
+      function add() {
+        count++;
+        document.getElementById("counter").innerHTML = count;
+      }
+
+      function sub() {
+        if (count > 0) count--; 
+        document.getElementById("counter").innerHTML = count;
+      }
+      function add2() {
+        count2++;
+        document.getElementById("counter2").innerHTML = count2;
+      }
+
+      function sub2() {
+        if (count2 > 0) count2--; 
+        document.getElementById("counter2").innerHTML = count2;
+      }
+
+      function add3() {
+        count3++;
+        document.getElementById("counter3").innerHTML = count3;
+      }
+
+      function sub3() {
+        if (count3 > 0) count3--; 
+        document.getElementById("counter3").innerHTML = count3;
+      }
+
       let seconds = 0;
       let intervalId = null;
 
       function myStartFunction() {
-        // Prevent multiple intervals from running at once
         if (intervalId !== null) return;
         intervalId = setInterval(function() {
           seconds++;
@@ -73,6 +112,7 @@ git          <li>Below is a timer you can use for how long you exercise for</li>
         seconds = 0;
         document.getElementById("timer").innerHTML = seconds;
       }
+
       function toggleMenu() {
         document.getElementById('nav-links').classList.toggle('open');
       }
