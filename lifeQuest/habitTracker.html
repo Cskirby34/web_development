@@ -13,7 +13,6 @@
     <header>
       <h1>Healthy Habit Tracker</h1>
     </header>
-
     <nav>
       <button class="hamburger" onclick="toggleMenu()">☰</button>
       <b id="nav-links">
@@ -28,7 +27,6 @@
       </b>
       <a href="login.html" class="login-btn">Login</a>
     </nav>
-
     <main>
       <section>
         <h2>Today's log</h2>
@@ -37,20 +35,31 @@
           <li>Water: 6 glasses</li>
           <li>Sleep: 7 hours</li>
           <li>Exercise: 30 minutes</li>
-          <li>Timer</li>
+          <li>Timer: <span id="time">0</span> seconds</li>
         </ul>
+        <button onclick="myStartFunction()">Start!</button>
+        <button onclick="myStopFunction()">Stop!</button>
       </section>
     </main>
-
     <footer>
       <p>&#169; 2026 LifeQuest</p>
     </footer>
-
     <script>
+      let seconds = 0;
+      let intervalId = null;
+
+      intervalId = setInterval(function() {
+        seconds++;
+        document.getElementById("time").innerHTML = seconds;
+      }, 1000);
+
+      function myStopFunction() {
+        clearInterval(intervalId);
+      }
+
       function toggleMenu() {
         document.getElementById('nav-links').classList.toggle('open');
       }
-
       document.addEventListener('click', function(e) {
         const nav = document.querySelector('nav');
         if (!nav.contains(e.target)) {
