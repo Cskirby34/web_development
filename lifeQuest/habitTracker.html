@@ -6,7 +6,6 @@
     <title>Habit Tracker</title>
     <link href="css/background.css" type="text/css" rel="stylesheet">
     <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <script src="js/script.js" defer></script>
     <script src="js/nav.js"></script>
   </head>
   <body>
@@ -34,11 +33,17 @@
           <li>Meals: 3</li>
           <li>Water: 6 glasses</li>
           <li>Sleep: 7 hours</li>
-          <li>Exercise: 30 minutes</li>
-          <li>Timer: <span id="time">0</span> seconds</li>
+git          <li>Below is a timer you can use for how long you exercise for</li>
+          <div>
+            <li>Exercise: <span id="timer">0</span> seconds</li>
+
+          </div>
+
+          
         </ul>
         <button onclick="myStartFunction()">Start!</button>
         <button onclick="myStopFunction()">Stop!</button>
+        <button onclick="myResetFunction()">Reset!</button>
       </section>
     </main>
     <footer>
@@ -48,15 +53,26 @@
       let seconds = 0;
       let intervalId = null;
 
-      intervalId = setInterval(function() {
-        seconds++;
-        document.getElementById("time").innerHTML = seconds;
-      }, 1000);
+      function myStartFunction() {
+        // Prevent multiple intervals from running at once
+        if (intervalId !== null) return;
+        intervalId = setInterval(function() {
+          seconds++;
+          document.getElementById("timer").innerHTML = seconds;
+        }, 1000);
+      }
 
       function myStopFunction() {
         clearInterval(intervalId);
+        intervalId = null;
       }
 
+      function myResetFunction() {
+        clearInterval(intervalId);
+        intervalId = null;
+        seconds = 0;
+        document.getElementById("timer").innerHTML = seconds;
+      }
       function toggleMenu() {
         document.getElementById('nav-links').classList.toggle('open');
       }

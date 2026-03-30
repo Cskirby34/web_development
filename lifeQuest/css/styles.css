@@ -142,7 +142,7 @@ canvas {
     z-index: 999;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     header {
         height: 120px;
         overflow: hidden;
