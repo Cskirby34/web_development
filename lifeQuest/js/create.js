@@ -62,6 +62,6 @@ function button1(){
 }
 
 function button2(){
-   const password = document.getElementById("password");
-   confirmpassword.type = confirmpassword.type === "password" ? "text" : "password";
+   const confirmPassword = document.getElementById("confirmPassword");
+   confirmPassword.type = confirmPassword.type === "password" ? "text" : "password";
 }

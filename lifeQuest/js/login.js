@@ -34,8 +34,12 @@ function checkForm() {
       if (errorDiv) errorDiv.innerHTML = "";
    }
 }
-
-document.querySelector("button[type='submit']").addEventListener("click", function(event) {
+document.querySelector("form").addEventListener("submit", function(event) {
    event.preventDefault();
    checkForm();
 });
+
+function button1(){
+   const password = document.getElementById("password");
+   password.type = password.type === "password" ? "text" : "password";
+}
