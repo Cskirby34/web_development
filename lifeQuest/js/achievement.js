@@ -17,7 +17,7 @@ function createConfetti() {
 
    const fallDuration = Math.random() * 3 + 2;
 
-   confetti.style.animationDuration =
+   confetti.style.animation =
       `fallSpin ${fallDuration}s linear infinite`;
 
    document.body.appendChild(confetti);
