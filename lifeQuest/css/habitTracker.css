@@ -1,0 +1,33 @@
+header {
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+ul li {
+    background-color: white;
+    margin: 10px 0;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background-color: #e0f7e9;
+}
+
+#counter, #counter2, #counter3 {
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        padding: 30px 10px;
+        font-size: 16px;
+    }
+    ul li {
+        font-size: 14px;
+    }
+}
