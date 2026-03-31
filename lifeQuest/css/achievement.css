@@ -34,6 +34,7 @@ body {
     animation-name: fallSpin;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    z-index: 9999;
 }
 
 @keyframes fallSpin {
