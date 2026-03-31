@@ -5,7 +5,20 @@ header {
     text-align: center;
     padding: 40px 20px;
 }
+.achievement-card {
+    background: white;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.2s;
+}
 
+.achievement-card:hover {
+    transform: scale(1.03);
+}
 /* Confetti effect */
 body {
     overflow-x: hidden; /* prevents horizontal scroll when confetti flies */
@@ -13,26 +26,14 @@ body {
 .confetti {
     position: fixed;
     top: -10px;
-    width: 10px;
-    height: 14px;
-    opacity: 0.9;
     pointer-events: none;
-    animation-name: fall, spin;
-    animation-duration: 3s, 2s; /* control speed */
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    border-radius: 50%;
+    opacity: 0.9;
 }
-@keyframes fall {
+
+@keyframes fallSpin {
     to {
-        transform: translateY(110vh); /* make it fall below the viewport */
-    }
-}
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
+        transform: translateY(110vh) rotate(360deg);
     }
 }
 /* Achievements list */
@@ -56,7 +57,7 @@ ol li {
         padding: 30px 10px;
         font-size: 18px;
     }
-    ul li {
+    ol li {
         font-size: 14px;
     }
 }
