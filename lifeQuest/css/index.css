@@ -22,6 +22,7 @@ h3 {
 /* Lists */
 ol {
     padding-left: 20px;
+    list-style: none;
 }
 ol li {
     margin-bottom: 8px;
