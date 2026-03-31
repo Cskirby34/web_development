@@ -1,7 +1,50 @@
+
+header {
+    background-color: #9b59b6;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
 p, label {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1, h2 {
     font-family: Arial, sans-serif;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        padding: 30px 10px;
+        font-size: 16px;
+    }
+    form {
+        margin: 10px;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+    }
 }
