@@ -4,38 +4,14 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Achievement</title>
-   <link href="css/background.css" type="text/css" rel="stylesheet">
-   <link href="css/styles.css" type="text/css" rel="stylesheet">
+   <link href="css/background.css" rel="stylesheet">
+   <link href="css/styles.css" rel="stylesheet">
+   <link href="css/achievement.css" rel="stylesheet">
+
    <script src="js/script.js" defer></script>
    <script src="js/nav.js"></script>
-   <style>
-      body {
-         overflow-x: hidden;
-      }
-      .confetti {
-         position: fixed;
-         top: -10px;
-         width: 10px;
-         height: 14px;
-         opacity: 0.9;
-         pointer-events: none;
-         animation-name: fall, spin;
-         animation-timing-function: linear;
-      }
-      @keyframes fall {
-         to {
-            transform: translateY(110vh);
-         }
-      }
-      @keyframes spin {
-         from {
-            transform: rotate(0deg);
-         }
-         to {
-            transform: rotate(360deg);
-         }
-      }
-   </style>
+   <script src="js/confetti.js" defer></script>
+   
 </head>
 <body>
 <header>
@@ -68,29 +44,6 @@
 <footer>
    <p>© 2026 LifeQuest</p>
 </footer>
-<script>
-   const colors = [
-      "#ff3b3b", "#ffb703", "#4cc9f0",
-      "#80ed99", "#c77dff", "#f72585"
-   ];
-   function createConfetti() {
-      const confetti = document.createElement("div");
-      confetti.classList.add("confetti");
-      const size = Math.random() * 8 + 6;
-      confetti.style.width = size + "px";
-      confetti.style.height = size * 1.4 + "px";
-      confetti.style.left = Math.random() * window.innerWidth + "px";
-      confetti.style.backgroundColor =
-         colors[Math.floor(Math.random() * colors.length)];
-      const fallDuration = Math.random() * 3 + 2;
-      confetti.style.animationDuration =
-         `${fallDuration}s, ${Math.random() * 2 + 1}s`;
-      document.body.appendChild(confetti);
-      setTimeout(() => {
-         confetti.remove();
-      }, fallDuration * 1000);
-   }
-   setInterval(createConfetti, 100);
-</script>
+
 </body>
 </html>
