@@ -5,15 +5,16 @@ header {
     padding: 40px 20px;
 }
 
-ul li {
+ol li {
     background-color: white;
     margin: 10px 0;
     padding: 12px 20px;
     border-radius: 6px;
     cursor: pointer;
+    list-style: none;
 }
 
-ul li:hover {
+ol li:hover {
     background-color: #e0f7e9;
 }
 
@@ -27,7 +28,7 @@ ul li:hover {
         padding: 30px 10px;
         font-size: 16px;
     }
-    ul li {
+    ol li {
         font-size: 14px;
     }
 }
