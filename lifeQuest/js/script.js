@@ -51,52 +51,7 @@ if (clickBtn) {
 document.addEventListener("keydown", (event) => {
     console.log("Key pressed:", event.key);
 });
-// Form Validation
 
-const form = document.getElementById("myForm");
-
-if (form) {
-    form.addEventListener("submit", (e) => {
-        e.preventDefault(); // prevent page reload
-
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
-        const confirmPassword = document.getElementById("confirmPassword").value;
-        const error = document.getElementById("error");
-
-        error.textContent = "";
-
-        // Required fields
-        if (name === "" || email === "" || password === "") {
-            error.textContent = "All fields are required.";
-            return;
-        }
-
-        // Email validation (regex)
-        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-        if (!email.match(emailPattern)) {
-            error.textContent = "Invalid email format.";
-            return;
-        }
-
-        // Password length
-        if (password.length < 6) {
-            error.textContent = "Password must be at least 6 characters.";
-            return;
-        }
-
-        // Password match
-        if (password !== confirmPassword) {
-            error.textContent = "Passwords do not match.";
-            return;
-        }
-
-        // Success
-        alert("Form submitted successfully!");
-        form.reset();
-    });
-}
 // Interactive Features
 // Welcome message after 2 seconds
 setTimeout(() => {
