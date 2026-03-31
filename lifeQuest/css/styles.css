@@ -144,6 +144,10 @@ canvas {
     pointer-events: none;
     z-index: 999;
 }
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
 
 @media (max-width: 900px) {
     header {
