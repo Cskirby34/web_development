@@ -148,7 +148,7 @@ canvas {
     color: gray;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     header {
         height: 120px;
         overflow: hidden;
